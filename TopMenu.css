@@ -1,0 +1,52 @@
+#linked{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+#linkeded{
+    position: fixed;
+    top: 10px;
+    right: 120px;
+}
+#LoginBox {
+    postion: fixed;
+    top: 00px;
+    right: 00px;
+    z-index: -1;
+}
+#Searchbtn {
+    position: fixed;
+    top: 10px;
+    right: 120px;
+    z-index: +2;
+}
+
+#BodyS{
+    position: fixed;
+    top: 53px;
+    right: 415px;
+    z-index: +2;
+    visibility: hidden;
+}
+#HeadS{
+    position: fixed;
+    top: 53px;
+    right: 330px;
+    z-index: +2;
+    visibility: hidden;
+}
+
+}
+p {
+    position: fixed;
+    top: 35px;
+    right: 275px;
+    z-index: -1;
+    visibility: hidden;
+}
+#Home{
+    position: fixed;
+    top: 10px;
+    right: 120px;
+    visibility: hidden;
+}

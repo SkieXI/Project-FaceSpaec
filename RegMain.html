@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--Activity4
+Ver 1.61 (3-9-17)
+====
+Joe Leon
+Jonathan Couture
+Xavier Villa
+
+===
+This page is designed to allow the user to fill in their information to the following text boxes and when they hit submit
+that information entered, if approved by the page, into the spring17server table userreg.
+
+UPDATE 2-6-17
+Added Back Button at bottom of page. Nothing else was needed since many of the new elements we included in the
+previous build from Ver 0.3
+
+UPDATE 3-9-17
+
+=== -->
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="Layout.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+</head>
+<body>
+<form action="RegisterHandler.php" method="POST">
+    <img src="Graphics/logRegister.png" style="height: 75px">
+    <fieldset>
+        First Name<br>
+        <input name="First" type="text" maxlength="25"required/><br>
+
+        Last Name<br>
+        <input name="Last" type="text" maxlength="25"required/><br>
+        <br>
+
+        <fieldset>
+            User Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Email <br>
+
+            <!-- User Name -->
+            <input name="User"  type="text"
+                                minlength="4" pattern="^(?=.*\d)(?=.*[a-zA-Z0-9])(?!.*\s).*$"
+                                title="Needs at least one letter and one number."
+                                maxlength="255" required>
+
+            <!-- Email-->
+           <input name="Email" type="email" required/><br>
+
+        </fieldset>
+        <!-- New Password-->
+        <fieldset>
+            New Password<br>
+            <input name="password" type="password" id ="password" minlength="5" maxlength="127"required>
+            <br>Confirm Password <br>
+            <input type = "password" id="confirm_password" minlength="5" maxlength="127"required>
+            <!-- type="Password" hides the characters that the user will enter for privacy concerns. -->
+
+            <!-- Password Check -->
+
+            <script>
+
+                var password = document.getElementById("password")
+                    , confirm_password = document.getElementById("confirm_password");
+
+                function validatePassword(){
+                    if(password.value != confirm_password.value) {
+                        confirm_password.setCustomValidity("Passwords Don't Match");
+                    } else {
+                        confirm_password.setCustomValidity('');
+                    }
+                }
+
+                password.onchange = validatePassword;
+                confirm_password.onkeyup = validatePassword;
+
+            </script>
+            <br>
+
+            <!--Checkbox for ToS-->
+            <input type="checkbox" name="TOS" value="Agree"required> I agree to the Terms of Service.<br><br>
+            <!-- Submit Button-->
+            <input type="image" src="Graphics/btnRegister.png" style="height:35px" class="primary-button"> &nbsp; &nbsp;
+
+            <!-- FAQ Button -->
+            <a href="FAQ.html">
+                <img border="0" alt="ToS" src="Graphics/btnTOS.png" style="height:35px">
+            </a>&nbsp; &nbsp;
+
+            <!-- Go Back Button -->
+            <a href="index.html">
+                <img border="0" alt="TopPage" src="Graphics/btnReturnMainPage.png" style="height:35px">
+            </a>
+
+    </fieldset>
+    </fieldset>
+</form>
+</body>
+</html>

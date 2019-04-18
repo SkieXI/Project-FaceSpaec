@@ -1,0 +1,9 @@
+body{
+    background: linear-gradient(to bottom, #bbe0e3, #002c8d 100%) no-repeat center center fixed;
+    background-size: cover;
+}
+fieldset{
+    border:2px solid white;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}

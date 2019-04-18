@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="Layout.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form action="LoginHandler.php" method="POST">
+
+    <!-- Make custom text image for login. 3-9-17-->
+    <img src="Graphics/logLogin.png" style="height: 75px">
+
+    <fieldset>
+        User Name <br>
+
+        <input type="text" name="User" id="User" maxlength="128"required><br>
+        Password<br>
+        <input type="password" name="Password" id ="Password" maxlength="128"required> <br><br>
+
+        <!-- Submit Button -->
+        <input type="image" src="Graphics/btnRegSubmit.png" style="height:35px" class="pure-button primary">&nbsp; &nbsp;
+        <!-- pure button will call up the LoginHandler.php file. -->
+
+        <!-- Go Back Button -->
+        <a href="index.html">
+            <img border="0" alt="TopPage" src="Graphics/btnReturnMainPage.png" style="height:35px">
+        </a>
+    </fieldset>
+
+</form>
+<body>
+<html>
